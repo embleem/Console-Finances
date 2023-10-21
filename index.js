@@ -91,33 +91,21 @@ console.log("Financial Analysis");
 console.log("\n")
 console.log("Total Months: " + finances.length);
 
+let numbersArray = [];
+let sum = 0;
 
-// Use a regular expression to match numbers in the string
-let numbersArray = finances.match(/\d+/g);
-// Loop through the matched numbers
-if (numbersArray) {
-    for (let i = 0; i < numbersArray.length; i++) {
-        console.log(numbersArray[i]);
-    }
-} else {
-    console.log("No numbers found in the string.");
+for(const number of finances) {
+  numbersArray.push(number[1]);
 }
 
+console.log(numbersArray);
 
 
+for (let i = 0; i < numbersArray.length; i++ ) {
+ sum += numbersArray[i];
+}
 
-//var onlyNumbers = finances.filter(element => typeof element === Number);
-//console.log(onlyNumbers.length);
-
-// create a variable for the sum and initialize it
-
-//let sum = 0;
-//for (let i = 0; i < finances.length; i++ ) {
-//  sum += finances[i];
-//  if (finances.filter) element => typeof element === Number;
-//}
-
-//console.log(sum); 
+console.log(sum); 
 
 
 
