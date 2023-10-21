@@ -86,3 +86,67 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+console.log("Financial Analysis");
+console.log("\n")
+console.log("Total Months: " + finances.length);
+
+
+var onlyNumbers = finances.filter(element => typeof element === Number);
+console.log(onlyNumbers.length);
+
+// create a variable for the sum and initialize it
+
+let sum = 0;
+for (let i = 0; i < finances.length; i++ ) {
+  sum += finances[i];
+  if (finances.filter) element => typeof element === Number;
+}
+
+console.log(sum); 
+
+
+
+
+
+//var numOfTrue = Answers.filter(x => x === "true").length;//
+
+//var numOfTrue = 0;
+//for(var i=0;i<Answers.length;i++){
+//    if(Answers[i] === "true")
+//       numOfTrue++;
+//}
+
+
+//var netProfit = 0;
+//for (var i = 0; i < finances.length; i++) {
+//  var element = finances[i];
+//  
+
+//}
+
+//console.log(netProfit);
+
+//function justNumbers(finances) {
+  //var numsStr = string.replace(/[^0-9]/g, '');
+  //return parseInt(numsStr);
+//}
+
+//var input = "Rs. 6,67,000";
+//var number = justNumbers(input);
+//console.log(number); // 667000
+
+
+//let x = 2;
+//let y = 3;
+//let result = eval('x + y');
+//console.log(result); // Output: 5
+//[16:10]
+//let expression = '5+2+6-3*4';
+//let result = eval(expression);
+//console.log(result); // Output: -3 
+//
+
+//console.log(parseFloat[finances]);//
+
+//\D
