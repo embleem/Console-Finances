@@ -109,7 +109,9 @@ for (let i = 0; i < finances.length; i++) {
   for (let k = 0; k < finances[i].length; k++) {
     if (typeof finances[i][k] !== 'string') {
       total += finances[i][k]
-      change = finances[i][k] - net;
+      if (i > 0) {
+        change += finances[i][k] - finances[i - 1][k];
+      }
       net = finances[i][k]
       numbersArray.push(change)
 
@@ -136,7 +138,7 @@ for (let i = 0; i < numbersArray.length; i++) {
 console.log("Total: $" + total);
 
 // Average Change
-var averageChange = Math.round((sum / (finances.length - 1)) * 100) / 100;
+var averageChange = Math.round((change / (finances.length - 1)) * 100) / 100;
 
 console.log("Average Change: " + averageChange);
 

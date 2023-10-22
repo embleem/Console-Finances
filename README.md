@@ -39,5 +39,5 @@ MIT License
 Below is an image of what the information displayed to the console should look like.
 
 ```md
-![What end console should look like:](/assets/image.png)
+![Alt text](/assets/console.png)
 ```
