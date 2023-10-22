@@ -12,9 +12,9 @@ Please either pull from this repository OR download the file, extract its conten
 
 Below is the file structure to use this project.
 
- ```md
+```md
 ![Image of the File Structure for this project](/assets/file_structure.png)
- ```
+```
 
 
 ## Credits
@@ -38,4 +38,6 @@ MIT License
 
 Below is an image of what the information displayed to the console should look like.
 
+```md
 ![What end console should look like:](/assets/image.png)
+```
