@@ -42,5 +42,6 @@ MIT License
 Below is an image of what the information displayed to the console should look like.
 
 ```md
-![Image of what the console should look like.](./assets/console.png)
+![What the console looks like](./assets/console.png)
 ```
+
