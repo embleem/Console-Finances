@@ -131,19 +131,20 @@ console.log(averageChange/(totalMonths - 1));
 //If the current element is greater than max, set max to the current element
 //Return the difference between max and min
 
-// function largestDifference(array) {
-//   var min = array[0];
-//   var max = array[0];
-//   for (var i = 0; i < array.length; i++) {
-//     if (array[i] < min) {
-//       min = array[i];
-//     }
-//     if (array[i] > max) {
-//       max = array[i];
-//     }
-//   }
-//   return max - min;
-// }
+function largestDifference(numbersArray) {
+var min = numbersArray[0];
+var max = numbersArray[0];
+   for (var i = 0; i < numbersArray.length; i++) {
+     if (numbersArray[i] < min) {
+       min = numbersArray[i];
+     }
+    if (numbersArray[i] > max) {
+      max = numbersArray[i];
+    }
+  }
+  return max - min;
+}
 
+console.log(max - min)
 
 // Greatest Decrease in Profits/Losses 
