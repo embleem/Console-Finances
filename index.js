@@ -115,5 +115,28 @@ console.log("Total: $" + sum);
 // Average Change
 
 // Greatest Increase in Profits/Losses
+//console.log(Math.max(...numbersArray))
+
+//Set min to the first element of the array
+//Set max to the first element of the array
+//Loop through the array
+//If the current element is less than min, set min to the current element
+//If the current element is greater than max, set max to the current element
+//Return the difference between max and min
+
+function largestDifference(array) {
+  var min = array[0];
+  var max = array[0];
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] < min) {
+      min = array[i];
+    }
+    if (array[i] > max) {
+      max = array[i];
+    }
+  }
+  return max - min;
+}
+
 
 // Greatest Decrease in Profits/Losses 
