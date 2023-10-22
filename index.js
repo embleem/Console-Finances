@@ -114,11 +114,11 @@ for (let i = 0; i < finances.length; i++) {
       numbersArray.push(change)
 
       if(change > greatestChange[1]){
-        greatestChange = [finances[i][0], finances[i][1]]
+        greatestChange = [finances[i][0], change];
       }
 
       if(change < leastChange[1]){
-        leastChange = [finances[i][0], finances[i][1]]
+        leastChange = [finances[i][0], change];
       }
       //console.log(change);
 
