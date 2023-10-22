@@ -104,16 +104,20 @@ let change = 0
 let total = 0
 let greatestChange = ['', 0]
 let leastChange = ['', 9999999999]
+let sumOfChange = 0;
+
 
 for (let i = 0; i < finances.length; i++) {
   for (let k = 0; k < finances[i].length; k++) {
     if (typeof finances[i][k] !== 'string') {
       total += finances[i][k]
       if (i > 0) {
-        change += finances[i][k] - finances[i - 1][k];
-      }
+        change = finances[i][k] - finances[i - 1][k];
+        sumOfChange += finances[i][k] - finances[i - 1][k];
+    }
       net = finances[i][k]
       numbersArray.push(change)
+      
 
       if(change > greatestChange[1]){
         greatestChange = [finances[i][0], change];
@@ -138,13 +142,13 @@ for (let i = 0; i < numbersArray.length; i++) {
 console.log("Total: $" + total);
 
 // Average Change
-var averageChange = Math.round((change / (finances.length - 1)) * 100) / 100;
+var averageChange = Math.round((sumOfChange / (finances.length - 1)) * 100) / 100;
 
 console.log("Average Change: " + averageChange);
 
 // Greatest Increase in Profits/Losses and Greatest Decrease in Profits/Losses
-console.log('Great Increase in Profits/Losses: '+ greatestChange[0] + ' $' + greatestChange[1]);;
-console.log('Great Decrease in Profits/Losses: '+ leastChange[0] + ' $' + leastChange[1]);
+console.log('Greatest Increase in Profits/Losses: '+ greatestChange[0] + ' $' + greatestChange[1]);
+console.log('Greatest Decrease in Profits/Losses: '+ leastChange[0] + ' $' + leastChange[0+1]);
 
 //
 //

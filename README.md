@@ -13,21 +13,24 @@ Please either pull from this repository OR download the file, extract its conten
 Below is the file structure to use this project.
 
 ```md
-![Image of the File Structure for this project](/assets/file_structure.png)
+![Image of the File Structure for this project.](./assets/file_structure.png)
 ```
 
 
 ## Credits
 
-With help from Ask BCS Assistants Yousseff, Morgan and Zach.
+With help from Ask BCS Assistants Yousseff, Morgan, Quinton & Zach.
 
 With help from tutor Jose.
 
 With help from W3 Schools Information on JavaScript Loops and Math:
+
 https://www.w3schools.com/js/js_loop_for.asp
+
 https://www.w3schools.com/jsref/jsref_obj_math.asp
 
 With help from GeeksForGeeks:
+
 https://www.geeksforgeeks.org/java-program-to-compute-the-sum-of-numbers-in-a-list-using-for-loop/
 
 ## License
@@ -39,5 +42,5 @@ MIT License
 Below is an image of what the information displayed to the console should look like.
 
 ```md
-![Alt text](/assets/console.png)
+![Image of what the console should look like.](./assets/console.png)
 ```
