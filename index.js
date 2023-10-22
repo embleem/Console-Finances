@@ -1,3 +1,5 @@
+// Data Set
+
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -87,10 +89,14 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// Heading
 console.log("Financial Analysis");
 console.log("\n")
+
+// Total Months
 console.log("Total Months: " + finances.length);
 
+// Total Profit 
 let numbersArray = [];
 let sum = 0;
 
@@ -100,9 +106,14 @@ for(const number of finances) {
 
 //console.log(numbersArray);
 
-
 for (let i = 0; i < numbersArray.length; i++ ) {
  sum += numbersArray[i];
 }
 
 console.log("Total: $" + sum); 
+
+// Average Change
+
+// Greatest Increase in Profits/Losses
+
+// Greatest Decrease in Profits/Losses 
