@@ -112,14 +112,13 @@ for (let i = 0; i < numbersArray.length; i++ ) {
 console.log("Total: $" + sum); 
 
 // Average Change
-var totalMonths = (finances.length);
 var averageChange = 0;
 
-for (let i = 0; i < totalMonths; i++) {
- const averageChange = (numbersArray[i] + numbersArray[i+1]);
+for (let i = 0; i < finances.length; i++) {
+ averageChange = (numbersArray[i] + numbersArray[i+1]);
 }
 
-console.log(averageChange/(totalMonths - 1));
+console.log(averageChange/(finances.length - 1));
 
 // Greatest Increase in Profits/Losses
 //console.log(Math.max(...numbersArray))
