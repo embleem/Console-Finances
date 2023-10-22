@@ -98,11 +98,11 @@ for(const number of finances) {
   numbersArray.push(number[1]);
 }
 
-console.log(numbersArray);
+//console.log(numbersArray);
 
 
 for (let i = 0; i < numbersArray.length; i++ ) {
  sum += numbersArray[i];
 }
 
-console.log(sum); 
+console.log("Total: $" + sum); 
