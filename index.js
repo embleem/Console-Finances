@@ -97,36 +97,32 @@ console.log("\n")
 console.log("Total Months: " + finances.length);
 
 // Loop Calculations
-let numbersArray = [];
-let sum = 0;
-let net = 0;
-let change = 0
-let total = 0
+let sumOfProfitLoss = 0
 let greatestChange = ['', 0]
 let leastChange = ['', 9999999999]
 let sumOfChange = 0;
 
 
 for (let i = 0; i < finances.length; i++) {
-  for (let k = 0; k < finances[i].length; k++) {
-    if (typeof finances[i][k] !== 'string') {
-      total += finances[i][k]
+  let monthlyProfitLoss = finances[i];
+  for (let k = 0; k < monthlyProfitLoss.length; k++) {
+    if (typeof monthlyProfitLoss[k] !== 'string') {
+      let profitLoss = monthlyProfitLoss[k];
+      let change = 0;
+      sumOfProfitLoss += profitLoss;
       if (i > 0) {
-        change = finances[i][k] - finances[i - 1][k];
-        sumOfChange += finances[i][k] - finances[i - 1][k];
-    }
-      net = finances[i][k]
-      numbersArray.push(change)
-      
-
-      if(change > greatestChange[1]){
-        greatestChange = [finances[i][0], change];
+        let previousProfitLoss = finances[i - 1][k];
+        change = profitLoss - previousProfitLoss;
+        sumOfChange += profitLoss - previousProfitLoss;
       }
 
-      if(change < leastChange[1]){
-        leastChange = [finances[i][0], change];
+      if (change > greatestChange[1]) {
+        greatestChange = [monthlyProfitLoss[0], change];
       }
-      //console.log(change);
+
+      if (change < leastChange[1]) {
+        leastChange = [monthlyProfitLoss[0], change];
+      }
 
     }
 
@@ -134,12 +130,8 @@ for (let i = 0; i < finances.length; i++) {
 
 }
 
-for (let i = 0; i < numbersArray.length; i++) {
-  sum += numbersArray[i]
-}
-
 // Total Profit
-console.log("Total: $" + total);
+console.log("Total: $" + sumOfProfitLoss);
 
 // Average Change
 var averageChange = Math.round((sumOfChange / (finances.length - 1)) * 100) / 100;
@@ -147,44 +139,5 @@ var averageChange = Math.round((sumOfChange / (finances.length - 1)) * 100) / 10
 console.log("Average Change: " + averageChange);
 
 // Greatest Increase in Profits/Losses and Greatest Decrease in Profits/Losses
-console.log('Greatest Increase in Profits/Losses: '+ greatestChange[0] + ' $' + greatestChange[1]);
-console.log('Greatest Decrease in Profits/Losses: '+ leastChange[0] + ' $' + leastChange[0+1]);
-
-//
-//
-
-//## Old Code ##//
-
-// Previous way I worked out numbersArray
-
-// for(const number of finances) {
-//   numbersArray.push(number[1]);
-// }
-
-// //console.log(numbersArray);
-
-//Previous Way I attempted to work out the Average Change
-
-// for (let i = 0; i < finances.length; i++) {
-//  averageChange = (numbersArray[i] - numbersArray[i+1]);
-// }
-
-// console.log(averageChange/(finances.length - 1));
-
-// Previous way I tried to work out increase/decrease
-
-// function largestDifference(numbersArray) {
-//   var min = numbersArray[0];
-//   var max = numbersArray[0];
-//   for (var i = 0; i < numbersArray.length; i++) {
-//     if (numbersArray[i] < min) {
-//       min = numbersArray[i];
-//     }
-//     if (numbersArray[i] > max) {
-//       max = numbersArray[i];
-//     }
-//   }
-//   return max - min;
-// }
-
-// console.log(max - min)
+console.log('Greatest Increase in Profits/Losses: ' + greatestChange[0] + ' $' + greatestChange[1]);
+console.log('Greatest Decrease in Profits/Losses: ' + leastChange[0] + ' $' + leastChange[0 + 1]);

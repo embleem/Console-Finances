@@ -12,16 +12,15 @@ Please either pull from this repository OR download the file, extract its conten
 
 Below is the file structure to use this project.
 
-```md
 ![Image of the File Structure for this project.](./assets/file_structure.png)
-```
-
 
 ## Credits
 
 With help from Ask BCS Assistants Yousseff, Morgan, Quinton & Zach.
 
 With help from tutor Jose.
+
+With help from Greg Linklater.
 
 With help from W3 Schools Information on JavaScript Loops and Math:
 
@@ -41,7 +40,4 @@ MIT License
 
 Below is an image of what the information displayed to the console should look like.
 
-```md
 ![What the console looks like](./assets/console.png)
-```
-
